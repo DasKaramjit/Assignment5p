@@ -38,5 +38,7 @@ namespace Assignment5p
             this.Hide();
             Program.orderForm.ShowDialog();
         }
+
+      
     }
 }

@@ -21,7 +21,12 @@ namespace Assignment5p
         {
             this.Hide();
             splashtimer.Stop();
-           // Program.startForm.Show();
+            Program.startForm.Show();
+        }
+
+        private void Splashform_Load(object sender, EventArgs e)
+        {
+            splashtimer.Start();
         }
     }
 }

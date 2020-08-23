@@ -44,5 +44,35 @@ namespace Assignment5p
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+            if (e.RowIndex >= 0)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+
+                //GetDataFromSelectedRow();
+                Next.Enabled = true;  //make next button enabled
+            }
+            else
+            {
+                Next.Enabled = false;
+            }
+        }
+      /*  private void GetDataFromSelectedRow()
+        {
+            Program.selectedProduct = (Product)dataGridView1.CurrentRow.DataBoundItem;
+
+            if (Program.selectedProduct != null)
+            {
+                string manufacturer = Program.selectedProduct.manufacturer;
+                string model = Program.selectedProduct.model;
+                decimal cost = (decimal)Program.selectedProduct.cost;
+
+                textBox1.Text = manufacturer + " " + model + " Priced at: " + cost.ToString("C2");
+            }*/
+        }
     }
-}
+
