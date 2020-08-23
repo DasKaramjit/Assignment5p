@@ -60,6 +60,12 @@
     <Compile Include="Splashform.Designer.cs">
       <DependentUpon>Splashform.cs</DependentUpon>
     </Compile>
+    <Compile Include="Startform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startform.Designer.cs">
+      <DependentUpon>Startform.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -68,9 +74,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Splashform.resx">
       <DependentUpon>Splashform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startform.resx">
+      <DependentUpon>Startform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image-450w-138951182.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

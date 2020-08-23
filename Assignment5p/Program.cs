@@ -9,8 +9,8 @@ namespace Assignment5p
     static class Program
     {
         public static Splashform splashForm;
-       /* public static StartForm startForm;
-        public static SelectForm selectForm;
+        public static Startform startForm;
+      /*  public static SelectForm selectForm;
         public static Product selectedProduct;
         public static ProductInfoForm productInfoForm;
         public static OrderForm orderForm; */
@@ -23,8 +23,8 @@ namespace Assignment5p
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             splashForm = new Splashform();
-          /*  startForm = new StartForm();
-            selectForm = new SelectForm();
+           startForm = new Startform();
+           /* selectForm = new SelectForm();
             productInfoForm = new ProductInfoForm();
             orderForm = new OrderForm();*/
 
