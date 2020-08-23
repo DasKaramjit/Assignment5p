@@ -12,6 +12,7 @@ namespace Assignment5p
       public static Startform startForm;
        public static SelectForm selectForm;
         public static ProductInfo productInfoForm;
+       public static OrderForm orderForm;
         // public static Product selectedProduct;
 
         // public static OrderForm orderForm; 
@@ -28,7 +29,7 @@ namespace Assignment5p
            startForm = new Startform();
            selectForm = new SelectForm();
             productInfoForm = new ProductInfo();
-            
+            orderForm = new OrderForm();
 
             Application.Run(splashForm);
     
