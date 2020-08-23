@@ -21,5 +21,22 @@ namespace Assignment5p
         {
 
         }
+
+        private void selectanother_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.selectForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.orderForm.ShowDialog();
+        }
     }
 }

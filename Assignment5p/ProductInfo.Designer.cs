@@ -52,6 +52,9 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.selectanother = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +64,7 @@
             this.menuStrip1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(316, 9);
+            this.menuStrip1.Location = new System.Drawing.Point(316, 31);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(202, 24);
             this.menuStrip1.TabIndex = 0;
@@ -268,12 +271,45 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // selectanother
+            // 
+            this.selectanother.Location = new System.Drawing.Point(83, 444);
+            this.selectanother.Name = "selectanother";
+            this.selectanother.Size = new System.Drawing.Size(125, 38);
+            this.selectanother.TabIndex = 7;
+            this.selectanother.Text = "Select another";
+            this.selectanother.UseVisualStyleBackColor = true;
+            this.selectanother.Click += new System.EventHandler(this.selectanother_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(298, 444);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 38);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Next";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(442, 444);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(106, 38);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ProductInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 494);
             this.ControlBox = false;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.selectanother);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox2);
@@ -323,5 +359,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button selectanother;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
