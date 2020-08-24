@@ -16,19 +16,35 @@ namespace Assignment5p
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Hide start form and display select form
+        /// when user click new order button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void startneworder_Click(object sender, EventArgs e)
         {
               this.Hide();
-            Program.selectForm.ShowDialog();
+            Program.selectForm.Show();
         }
+        /// <summary>
+        /// Hide start form and display product info form
+        /// when user click load saved order button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void loadorder_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.productInfoForm.ShowDialog();
+            Program.productInfoForm.Show();
         }
-
+        /// <summary>
+        /// Hide start form and display product info form
+        /// when user click load saved order button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();

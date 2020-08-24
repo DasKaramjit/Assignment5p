@@ -41,7 +41,7 @@ namespace Assignment5p
             productInfoForm = new ProductInfo();
             orderForm = new OrderForm();
 
-            Application.Run(new Splashform());
+            Application.Run(splashForm);
         }
     }
 }

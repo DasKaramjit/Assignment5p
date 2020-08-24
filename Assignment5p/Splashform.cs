@@ -16,6 +16,7 @@ namespace Assignment5p
         {
             InitializeComponent();
         }
+       
 
         private void splashtimer_Tick(object sender, EventArgs e)
         {
@@ -26,7 +27,7 @@ namespace Assignment5p
 
         private void Splashform_Load(object sender, EventArgs e)
         {
-            splashtimer.Start();
+
         }
     }
 }
