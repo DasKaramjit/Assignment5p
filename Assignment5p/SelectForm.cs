@@ -27,11 +27,7 @@ namespace Assignment5p
             Application.Exit();
         }
 
-        private void Next_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Program.productInfoForm.ShowDialog();
-        }
+      
 
         private void selection_Click(object sender, EventArgs e)
         {
@@ -44,16 +40,13 @@ namespace Assignment5p
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-
             if (e.RowIndex >= 0)
             {
                 dataGridView1.Rows[e.RowIndex].Selected = true;
 
-                //GetDataFromSelectedRow();
+                GetDataFromSelectedRow();
                 Next.Enabled = true;  //make next button enabled
             }
             else
@@ -61,18 +54,27 @@ namespace Assignment5p
                 Next.Enabled = false;
             }
         }
-      /*  private void GetDataFromSelectedRow()
+        private void GetDataFromSelectedRow()
         {
-            Program.selectedProduct = (Product)dataGridView1.CurrentRow.DataBoundItem;
+          
 
-            if (Program.selectedProduct != null)
+            if (Program.selectitem != null)
             {
-                string manufacturer = Program.selectedProduct.manufacturer;
-                string model = Program.selectedProduct.model;
-                decimal cost = (decimal)Program.selectedProduct.cost;
+                string manufacturer = Program.selectitem.manufacturer;
+                string model = Program.selectitem.model;
+                decimal cost = (decimal)Program.selectitem.cost;
 
-                textBox1.Text = manufacturer + " " + model + " Priced at: " + cost.ToString("C2");
-            }*/
+                dataGridView1.Text = manufacturer + " " + model + " Priced at: " + cost.ToString("C2");
+            }
         }
+        private void Next_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.productInfoForm.ShowDialog();
+        }
+       
+
+      
+    }
     }
 

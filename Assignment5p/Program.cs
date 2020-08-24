@@ -24,7 +24,7 @@ namespace Assignment5p
         
 
         public static OrderForm orderForm;
-        
+        public static Item selectitem;
 
         /// <summary>
         /// The main entry point for the application.

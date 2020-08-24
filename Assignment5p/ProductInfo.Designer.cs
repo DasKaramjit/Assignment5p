@@ -55,8 +55,16 @@
             this.selectanother = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectAnotherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -163,9 +171,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(16, 184);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 17);
+            this.label5.Size = new System.Drawing.Size(36, 17);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Screensize";
+            this.label5.Text = "Cost";
             // 
             // label4
             // 
@@ -273,7 +281,7 @@
             // 
             // selectanother
             // 
-            this.selectanother.Location = new System.Drawing.Point(83, 444);
+            this.selectanother.Location = new System.Drawing.Point(31, 460);
             this.selectanother.Name = "selectanother";
             this.selectanother.Size = new System.Drawing.Size(125, 38);
             this.selectanother.TabIndex = 7;
@@ -283,7 +291,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(298, 444);
+            this.button1.Location = new System.Drawing.Point(651, 460);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 38);
             this.button1.TabIndex = 8;
@@ -293,13 +301,67 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(442, 444);
+            this.button2.Location = new System.Drawing.Point(466, 460);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 38);
             this.button2.TabIndex = 9;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip2.TabIndex = 10;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.openToolStripMenuItem.Text = "Open";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Text = "Save";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.selectAnotherToolStripMenuItem});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // selectAnotherToolStripMenuItem
+            // 
+            this.selectAnotherToolStripMenuItem.Name = "selectAnotherToolStripMenuItem";
+            this.selectAnotherToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.selectAnotherToolStripMenuItem.Text = "Select another";
             // 
             // ProductInfo
             // 
@@ -317,6 +379,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MinimizeBox = false;
@@ -328,6 +391,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,5 +427,12 @@
         private System.Windows.Forms.Button selectanother;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectAnotherToolStripMenuItem;
     }
 }

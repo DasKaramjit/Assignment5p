@@ -35,10 +35,6 @@
             this.Next = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dollarComputersDataSet = new Assignment5p.DollarComputersDataSet();
-            this.dollarComputersDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsTableAdapter = new Assignment5p.DollarComputersDataSetTableAdapters.productsTableAdapter();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,10 +66,14 @@
             this.mousttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dollarComputersDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dollarComputersDataSet = new Assignment5p.DollarComputersDataSet();
+            this.productsTableAdapter = new Assignment5p.DollarComputersDataSetTableAdapters.productsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // hardwareselection
@@ -130,6 +130,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -166,32 +168,16 @@
             this.webcamDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(17, 89);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1027, 473);
             this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // dollarComputersDataSet
-            // 
-            this.dollarComputersDataSet.DataSetName = "DollarComputersDataSet";
-            this.dollarComputersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dollarComputersDataSetBindingSource
-            // 
-            this.dollarComputersDataSetBindingSource.DataSource = this.dollarComputersDataSet;
-            this.dollarComputersDataSetBindingSource.Position = 0;
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "products";
-            this.productsBindingSource.DataSource = this.dollarComputersDataSetBindingSource;
-            // 
-            // productsTableAdapter
-            // 
-            this.productsTableAdapter.ClearBeforeFill = true;
-            // 
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+                      // 
             // productIDDataGridViewTextBoxColumn
             // 
             this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
@@ -441,6 +427,25 @@
             this.webcamDataGridViewTextBoxColumn.Name = "webcamDataGridViewTextBoxColumn";
             this.webcamDataGridViewTextBoxColumn.Width = 125;
             // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "products";
+            this.productsBindingSource.DataSource = this.dollarComputersDataSetBindingSource;
+            // 
+            // dollarComputersDataSetBindingSource
+            // 
+            this.dollarComputersDataSetBindingSource.DataSource = this.dollarComputersDataSet;
+            this.dollarComputersDataSetBindingSource.Position = 0;
+            // 
+            // dollarComputersDataSet
+            // 
+            this.dollarComputersDataSet.DataSetName = "DollarComputersDataSet";
+            this.dollarComputersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -459,9 +464,9 @@
             this.Text = "SelectForm";
             this.Load += new System.EventHandler(this.SelectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
